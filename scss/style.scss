@@ -1,0 +1,55 @@
+@import 'config';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6 rem;
+    color: $dark-gray;   
+}
+
+header {
+
+    display: flex;
+    flex-direction: column;
+        
+    
+    img {
+        width: 35%;
+    }
+
+    hr {  
+        border-style: solid;  
+        border-color: $bright-field-green;
+    }
+}
+
+main {
+    background-color: $dark-gray;
+
+    logos {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    img {
+        width: 50%;
+
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
