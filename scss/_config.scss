@@ -1,5 +1,38 @@
+/* Colors */
+
 $bright-field-green: #5f9e43;
 $light-gray: #cfd3ce;
 $gray: #6f726e;
 $dark-gray: #414440;
 
+/* Colors */
+
+/* Mixins */
+
+//Sets text color dependent on background color
+@function set-text-color($color) {
+  @if(lightness($color) > 50) {
+    @return $dark-gray;
+  } @else {
+    @return #fff;
+  }
+}
+
+//Sets background color and text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+/*
+  Defines a default grid. Columns, Rows, and Gap are opitonal arguemnts
+  that set to defaulted the defined defaulted values if not specified.
+*/
+@mixin set-default-grid ($columns: 1fr, $rows: 1fr, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  grid-gap: $gap;
+}
+
+/* Mixins */

@@ -1,8 +1,11 @@
 @import 'config';
 
+/* Layout Containers */
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -11,38 +14,54 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6 rem;
-    color: $dark-gray;   
+    font-size: 1.6rem;
+    color: $dark-gray; 
+    @include set-default-grid;
 }
 
 header {
+    @include set-background($gray);
+    @include set-default-grid;
+}
 
+nav {
+    @include set-background($light-gray);
     display: flex;
-    flex-direction: column;
-        
-    
-    img {
-        width: 35%;
-    }
-
-    hr {  
-        border-style: solid;  
-        border-color: $bright-field-green;
-    }
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    border-bottom: solid 1px #fff;
 }
 
 main {
-    background-color: $dark-gray;
+    @include set-background($gray);
+}
 
-    logos {
+footer {
+    @include set-background($gray);
+}
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+/* Layout Containers */
+
+/* Tag Default Styling */
+
+div {
+    @include set-background($light-gray);
+}
+
+a {
+    text-decoration: none;
+    color: $bright-field-green;
+
+    &:hover {
+        text-decoration: underline;
     }
-    
-    img {
-        width: 50%;
 
+    &:visited {
+        color: $bright-field-green;
     }
 }
 
@@ -53,3 +72,5 @@ ul {
 img {
     width: 100%;
 }
+
+/* Tag Default Styling */
