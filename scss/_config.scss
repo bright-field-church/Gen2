@@ -5,8 +5,6 @@ $light-gray: #cfd3ce;
 $gray: #6f726e;
 $dark-gray: #414440;
 
-/* Colors */
-
 /* Mixins */
 
 //Sets text color dependent on background color
@@ -34,5 +32,3 @@ $dark-gray: #414440;
   grid-template-rows: $rows;
   grid-gap: $gap;
 }
-
-/* Mixins */

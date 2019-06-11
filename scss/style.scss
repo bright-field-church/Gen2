@@ -16,15 +16,22 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     color: $dark-gray; 
-    @include set-default-grid;
+    @include set-default-grid(1fr, 1fr, 0rem);
 }
 
 header {
+    margin: 0;
+    padding: 0;
     @include set-background($gray);
     @include set-default-grid;
+
+    img {
+        margin-top: 3.5rem;
+    }
 }
 
 nav {
+    padding: 1.5rem 1.5rem;
     @include set-background($light-gray);
     display: flex;
     align-items: center;
@@ -33,35 +40,50 @@ nav {
     z-index: 1;
     width: 100%;
     top: 0;
-    border-bottom: solid 1px #fff;
+
+    ul {
+        display: flex;
+    }
+
+    .container{
+        padding: .1rem .6rem;
+        margin:0;
+        border-radius: .2rem;
+        background-color: $gray;
+        
+        .menu-icon {
+            width: 3.0rem;
+            height: .3rem;
+            margin: .6rem 0;
+            transition: 0.4s;
+            border-radius: .2rem;
+            background-color: $dark-gray;
+        }
+    }
 }
 
 main {
     @include set-background($gray);
+    @include set-default-grid(1fr, 1fr, 0rem);
 }
 
 footer {
     @include set-background($gray);
+    @include set-default-grid;
 }
-
-/* Layout Containers */
 
 /* Tag Default Styling */
 
-div {
-    @include set-background($light-gray);
-}
-
 a {
+    padding: 0.5rem;
+    margin: 0.5rem;
     text-decoration: none;
-    color: $bright-field-green;
+    @include set-background($gray);
+    border-radius: 4px;
 
     &:hover {
-        text-decoration: underline;
-    }
 
-    &:visited {
-        color: $bright-field-green;
+        text-decoration: underline;
     }
 }
 
@@ -70,7 +92,10 @@ ul {
 }
 
 img {
-    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Tag Default Styling */
+
+
